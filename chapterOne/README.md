@@ -15,3 +15,5 @@ go build fetch.go
 Inspired by Unix curl, this program fetches data from a webpage and prints it to standard output.  
 
 ### 1.6: fetchall.go  
+
+"A goroutine is a concurrent function execution. A channel is a communication mechanism that allows one goroutine to pass values of a specified type to another goroutine."
