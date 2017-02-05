@@ -19,14 +19,16 @@ func TestCheckQuotaNotifiesUser(t *testing.T) {
 	const user = "joe@example.org"
 	CheckQuota(user)
 	if notifiedUser == "" && notifiedMsg == "" {
-		t.Fatalf("notifyUser not called")
+		t.Fatalf("notifyUser not called. This may indicate that the user specified for " 
+			+"this test has plenty of storage space remaining")
 	}
+	
 	if notifiedUser != user {
 		t.Errorf("wrong user (%s) notified, want %s", notifiedUser, user)
 	}
+
 	const wantSubstring = "98% of your quota"
 	if !strings.Contains(notifiedMsg, wantSubstring) {
 		t.Errorf("unexpected notification message <<%s>>, "+"want substring %q", notifiedMsg, wantSubstring)
 	}
 }
-
