@@ -3,7 +3,6 @@ package storage
 import (
 	"strings"
 	"testing"
-	"fmt"
 )
 
 func TestCheckQuotaNotifiesUser(t *testing.T) {
@@ -19,7 +18,6 @@ func TestCheckQuotaNotifiesUser(t *testing.T) {
 	//simulate 980 mb used condition...
 	const user = "joe@example.org"
 	CheckQuota(user)
-	fmt.Printf("notifiedUser: '%q'\nnotifiedMsg: '%q'\n", notifiedUser, notifiedMsg)
 	if notifiedUser == "" && notifiedMsg == "" {
 		t.Fatalf("notifyUser not called")
 	}
