@@ -5,7 +5,9 @@ go build gif.go
 ./gif > filename.gif
 ```
 Creates a simple black and white gif based on sinusoidal oscillation.  
-  
+<img src="https://github.com/robertnowell/golang/blob/master/chapterOne/Screen%20Shot%202017-02-06%20at%201.11.44%20PM.png" 
+alt="fdf" width="200" height="200" border="10"/>
+
 ### 1.5: fetch.go  
 usage:  
 ```
