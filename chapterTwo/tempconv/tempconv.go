@@ -19,9 +19,9 @@ const(
 	AbsoluteZeroK = 0
 )
 
-func (c Celsius) String() string { return fmt.Sprintf("%.2fdeg C", c)}
-func (f Fahrenheit) String() string { return fmt.Sprintf("%.fdeg F", f)}
-func (k Kelvin) String() string { return fmt.Sprintf("%.2fdeg K", k)}
+func (c Celsius) String() string { return fmt.Sprintf("%.1fdeg C", c)}
+func (f Fahrenheit) String() string { return fmt.Sprintf("%.1fdeg F", f)}
+func (k Kelvin) String() string { return fmt.Sprintf("%.1fdeg K", k)}
 
 // CToF converts a Celsius temperature to Fahrenheit.
 func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32)}
