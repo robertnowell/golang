@@ -5,6 +5,7 @@ import (
 	"unicode"
 	// "fmt"
 	)
+
 // IsPalindrome reports whether s reads the same way forward and backward
 func IsPalindrome(s string) bool {
 	var letters []rune
@@ -20,6 +21,6 @@ func IsPalindrome(s string) bool {
 			return false
 		}
 	}
-	// fmt.Printf("string = '%q'\nletters = %q\n", s, letters)
+
 	return true
 }

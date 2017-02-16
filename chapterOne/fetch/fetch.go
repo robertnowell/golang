@@ -34,7 +34,6 @@ import (
 // 	}
 // }
 
-
 func main() {
 	if len(os.Args) == 1{
 		fmt.Println("please include a url")
@@ -48,7 +47,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "fetch: %v\n, err")
 			os.Exit(1)
 		}
-		// stat := resp.Status
+
 		if _, err := io.Copy(os.Stdout, resp.Body); err != nil {
 			log.Fatal(err)
 		}

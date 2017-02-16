@@ -30,4 +30,3 @@ func echo(newline bool, sep string, args []string) error {
 	}
 	return nil
 }
-
